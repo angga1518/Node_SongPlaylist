@@ -4,52 +4,52 @@ const InvariantError = require('../../exceptions/InvariantError');
 const NotFoundError = require('../../exceptions/NotFoundError');
 const { mapDBToModel } = require('../../utils');
 
-class AlbumsService {
+class SongsService {
   constructor() {
     this._pool = new Pool();
   }
 
-  async addAlbum({ name, year }) {
-    const id = "album-"+nanoid(16);
+  async addSong({ title, year, genre, performer, duration, albumId }) {
+    const id = "song-"+nanoid(16);
 
     const query = {
-      text: 'INSERT INTO album VALUES($1, $2, $3) RETURNING id',
-      values: [id, name, year],
+      text: 'INSERT INTO song VALUES($1, $2, $3) RETURNING id',
+      values: [id, title, year, genre, performer, duration, albumId],
     };
 
     const result = await this._pool.query(query);
 
     if (!result.rows[0].id) {
-      throw new InvariantError('Album gagal ditambahkan');
+      throw new InvariantError('Lagu gagal ditambahkan');
     }
 
     return result.rows[0].id;
   }
 
-  async getAlbums() {
-    const result = await this._pool.query('SELECT * FROM album');
+  async getSongs() {
+    const result = await this._pool.query('SELECT * FROM song');
     return result.rows;
   }
 
-  async getAlbumById(id) {
+  async getSongById(id) {
     const query = {
-      text: 'SELECT * FROM album WHERE id = $1',
+      text: 'SELECT * FROM song WHERE id = $1',
       values: [id],
     };
     const result = await this._pool.query(query);
 
     if (!result.rows.length) {
-      throw new NotFoundError('Album tidak ditemukan');
+      throw new NotFoundError('Lagu tidak ditemukan');
     }
 
     return result.rows[0];
   }
 
-  async editAlbumById(id, { name, year }) {
+  async editSongById(id, { title, year, genre, performer, duration, albumId }) {
     const updatedAt = new Date().toISOString();
     const query = {
-      text: 'UPDATE album SET name = $1, year = $2 WHERE id = $3 RETURNING id',
-      values: [name, year, id],
+      text: 'UPDATE song SET name = $1, year = $2 WHERE id = $3 RETURNING id',
+      values: [title, year, genre, performer, duration, albumId, id],
     };
 
     const result = await this._pool.query(query);
@@ -59,18 +59,18 @@ class AlbumsService {
     }
   }
 
-  async deleteAlbumById(id) {
+  async deleteSongById(id) {
     const query = {
-      text: 'DELETE FROM album WHERE id = $1 RETURNING id',
+      text: 'DELETE FROM song WHERE id = $1 RETURNING id',
       values: [id],
     };
 
     const result = await this._pool.query(query);
 
     if (!result.rows.length) {
-      throw new NotFoundError('Album gagal dihapus. Id tidak ditemukan');
+      throw new NotFoundError('Lagu gagal dihapus. Id tidak ditemukan');
     }
   }
 }
 
-module.exports = AlbumsService;
+module.exports = SongsService;
