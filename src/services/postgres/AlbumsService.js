@@ -4,19 +4,17 @@ const InvariantError = require('../../exceptions/InvariantError');
 const NotFoundError = require('../../exceptions/NotFoundError');
 const { mapDBToModel } = require('../../utils');
 
-class NotesService {
+class AlbumsService {
   constructor() {
     this._pool = new Pool();
   }
 
-  async addNote({ title, body, tags }) {
-    const id = nanoid(16);
-    const createdAt = new Date().toISOString();
-    const updatedAt = createdAt;
+  async addAlbum({ name, year }) {
+    const id = "album-"+nanoid(16);
 
     const query = {
-      text: 'INSERT INTO notes VALUES($1, $2, $3, $4, $5, $6) RETURNING id',
-      values: [id, title, body, tags, createdAt, updatedAt],
+      text: 'INSERT INTO album VALUES($1, $2, $3) RETURNING id',
+      values: [id, name, year],
     };
 
     const result = await this._pool.query(query);
@@ -28,14 +26,14 @@ class NotesService {
     return result.rows[0].id;
   }
 
-  async getNotes() {
-    const result = await this._pool.query('SELECT * FROM notes');
-    return result.rows.map(mapDBToModel);
+  async getAlbums() {
+    const result = await this._pool.query('SELECT * FROM album');
+    return result.rows;
   }
 
-  async getNoteById(id) {
+  async getAlbumById(id) {
     const query = {
-      text: 'SELECT * FROM notes WHERE id = $1',
+      text: 'SELECT * FROM album WHERE id = $1',
       values: [id],
     };
     const result = await this._pool.query(query);
@@ -44,14 +42,14 @@ class NotesService {
       throw new NotFoundError('Catatan tidak ditemukan');
     }
 
-    return result.rows.map(mapDBToModel)[0];
+    return result.rows[0];
   }
 
-  async editNoteById(id, { title, body, tags }) {
+  async editAlbumById(id, { name, year }) {
     const updatedAt = new Date().toISOString();
     const query = {
-      text: 'UPDATE notes SET title = $1, body = $2, tags = $3, updated_at = $4 WHERE id = $5 RETURNING id',
-      values: [title, body, tags, updatedAt, id],
+      text: 'UPDATE album SET name = $1, year = $2 WHERE id = $3 RETURNING id',
+      values: [name, year, id],
     };
 
     const result = await this._pool.query(query);
@@ -61,9 +59,9 @@ class NotesService {
     }
   }
 
-  async deleteNoteById(id) {
+  async deleteAlbumById(id) {
     const query = {
-      text: 'DELETE FROM notes WHERE id = $1 RETURNING id',
+      text: 'DELETE FROM album WHERE id = $1 RETURNING id',
       values: [id],
     };
 
@@ -75,4 +73,4 @@ class NotesService {
   }
 }
 
-module.exports = NotesService;
+module.exports = AlbumsService;
