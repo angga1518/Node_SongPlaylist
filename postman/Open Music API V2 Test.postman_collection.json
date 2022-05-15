@@ -86,10 +86,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/albums",
+							"raw": "http://127.0.0.1:{{port}}/albums",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -146,10 +146,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/albums",
+							"raw": "http://127.0.0.1:{{port}}/albums",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -195,10 +195,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/albums/xxx",
+							"raw": "http://127.0.0.1:{{port}}/albums/xxx",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -250,10 +250,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/albums/{{albumId}}",
+							"raw": "http://127.0.0.1:{{port}}/albums/{{albumId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -342,10 +342,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/albums/{{albumId}}",
+							"raw": "http://127.0.0.1:{{port}}/albums/{{albumId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -401,10 +401,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/albums/xxx",
+							"raw": "http://127.0.0.1:{{port}}/albums/xxx",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -445,7 +445,7 @@
 									"pm.test('when GET detail albums', () => {\r",
 									"    const albumId = pm.environment.get('albumId');\r",
 									"    const port = pm.environment.get('port');\r",
-									"    pm.sendRequest(`http://localhost:${port}/albums/${albumId}`, (error, response) => {\r",
+									"    pm.sendRequest(`http://127.0.0.1:${port}/albums/${albumId}`, (error, response) => {\r",
 									"        if (!error) {\r",
 									"            pm.test('it should response with revised content', () => {\r",
 									"                pm.expect(response.code).to.equal(200);\r",
@@ -480,10 +480,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/albums/{{albumId}}",
+							"raw": "http://127.0.0.1:{{port}}/albums/{{albumId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -530,10 +530,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/albums/xxx",
+							"raw": "http://127.0.0.1:{{port}}/albums/xxx",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -574,7 +574,7 @@
 									"pm.test('when GET detail albums', () => {\r",
 									"    const albumId = pm.environment.get('albumId');\r",
 									"    const port = pm.environment.get('port');\r",
-									"    pm.sendRequest(`http://localhost:${port}/albums/${albumId}`, (error, response) => {\r",
+									"    pm.sendRequest(`http://127.0.0.1:${port}/albums/${albumId}`, (error, response) => {\r",
 									"        if (!error) {\r",
 									"            pm.test('it should response with not found', () => {\r",
 									"                pm.expect(response.code).to.equal(404);\r",
@@ -592,10 +592,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/albums/{{albumId}}",
+							"raw": "http://127.0.0.1:{{port}}/albums/{{albumId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -691,10 +691,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -760,10 +760,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -808,10 +808,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -866,10 +866,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -915,10 +915,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/xxx",
+							"raw": "http://127.0.0.1:{{port}}/songs/xxx",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -973,10 +973,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/{{songId}}",
+							"raw": "http://127.0.0.1:{{port}}/songs/{{songId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1067,10 +1067,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/{{songId}}",
+							"raw": "http://127.0.0.1:{{port}}/songs/{{songId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1135,10 +1135,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/xxx",
+							"raw": "http://127.0.0.1:{{port}}/songs/xxx",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1188,7 +1188,7 @@
 									"pm.test('when GET detail song', () => {\r",
 									"    const songId = pm.environment.get('songId');\r",
 									"    const port = pm.environment.get('port');\r",
-									"    pm.sendRequest(`http://localhost:${port}/songs/${songId}`, (error, response) => {\r",
+									"    pm.sendRequest(`http://127.0.0.1:${port}/songs/${songId}`, (error, response) => {\r",
 									"        if (!error) {\r",
 									"            pm.test('it should response with revised content', () => {\r",
 									"                pm.expect(response.code).to.equal(200);\r",
@@ -1226,10 +1226,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/{{songId}}",
+							"raw": "http://127.0.0.1:{{port}}/songs/{{songId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1276,10 +1276,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/xxx",
+							"raw": "http://127.0.0.1:{{port}}/songs/xxx",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1329,7 +1329,7 @@
 									"pm.test('when GET detail song', () => {\r",
 									"    const songId = pm.environment.get('songId');\r",
 									"    const port = pm.environment.get('port');\r",
-									"    pm.sendRequest(`http://localhost:${port}/songs/${songId}`, (error, response) => {\r",
+									"    pm.sendRequest(`http://127.0.0.1:${port}/songs/${songId}`, (error, response) => {\r",
 									"        if (!error) {\r",
 									"            pm.test('it should response with not found', () => {\r",
 									"                pm.expect(response.code).to.equal(404);\r",
@@ -1356,10 +1356,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/{{songId}}",
+							"raw": "http://127.0.0.1:{{port}}/songs/{{songId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1405,10 +1405,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/albums",
+									"raw": "http://127.0.0.1:{{port}}/albums",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -1474,10 +1474,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1541,10 +1541,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1597,10 +1597,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/albums/{{albumId}}",
+							"raw": "http://127.0.0.1:{{port}}/albums/{{albumId}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1655,10 +1655,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -1704,10 +1704,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -1753,10 +1753,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -1802,10 +1802,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -1863,10 +1863,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/songs?title=cint",
+							"raw": "http://127.0.0.1:{{port}}/songs?title=cint",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1928,10 +1928,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/songs?performer=chris",
+							"raw": "http://127.0.0.1:{{port}}/songs?performer=chris",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -1994,10 +1994,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/songs?title=kupu&performer=peter",
+							"raw": "http://127.0.0.1:{{port}}/songs?title=kupu&performer=peter",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2052,10 +2052,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/{{songIdA}}",
+							"raw": "http://127.0.0.1:{{port}}/songs/{{songIdA}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2101,10 +2101,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/{{songIdB}}",
+							"raw": "http://127.0.0.1:{{port}}/songs/{{songIdB}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2150,10 +2150,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/{{songIdC}}",
+							"raw": "http://127.0.0.1:{{port}}/songs/{{songIdC}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2199,10 +2199,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/songs/{{songIdD}}",
+							"raw": "http://127.0.0.1:{{port}}/songs/{{songIdD}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2296,10 +2296,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/users",
+							"raw": "http://127.0.0.1:{{port}}/users",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2363,10 +2363,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/users",
+							"raw": "http://127.0.0.1:{{port}}/users",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2386,7 +2386,7 @@
 									"const port = pm.environment.get('port');\r",
 									"\r",
 									"const requestParams = {\r",
-									"  url: `http://localhost:${port}/users`,\r",
+									"  url: `http://127.0.0.1:${port}/users`,\r",
 									"  method: 'POST',\r",
 									"  header: {\r",
 									"    'Content-Type': 'application/json',\r",
@@ -2446,10 +2446,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/users",
+							"raw": "http://127.0.0.1:{{port}}/users",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2482,10 +2482,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/users",
+									"raw": "http://127.0.0.1:{{port}}/users",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -2510,10 +2510,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/users",
+									"raw": "http://127.0.0.1:{{port}}/users",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -2601,10 +2601,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2667,10 +2667,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2733,10 +2733,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2804,10 +2804,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2875,10 +2875,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2932,10 +2932,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -2989,10 +2989,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3046,10 +3046,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3104,10 +3104,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3161,10 +3161,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3218,10 +3218,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3275,10 +3275,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3332,10 +3332,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3389,10 +3389,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/authentications",
+							"raw": "http://127.0.0.1:{{port}}/authentications",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3446,10 +3446,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -3495,10 +3495,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -3534,10 +3534,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/users",
+									"raw": "http://127.0.0.1:{{port}}/users",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -3573,10 +3573,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/users",
+									"raw": "http://127.0.0.1:{{port}}/users",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -3622,10 +3622,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/authentications",
+									"raw": "http://127.0.0.1:{{port}}/authentications",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -3671,10 +3671,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/authentications",
+									"raw": "http://127.0.0.1:{{port}}/authentications",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -3723,10 +3723,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists",
+							"raw": "http://127.0.0.1:{{port}}/playlists",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3790,10 +3790,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists",
+							"raw": "http://127.0.0.1:{{port}}/playlists",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3860,10 +3860,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists",
+							"raw": "http://127.0.0.1:{{port}}/playlists",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -3930,10 +3930,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists",
+							"raw": "http://127.0.0.1:{{port}}/playlists",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4010,10 +4010,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists",
+							"raw": "http://127.0.0.1:{{port}}/playlists",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4077,10 +4077,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4146,10 +4146,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4215,10 +4215,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4284,10 +4284,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4353,10 +4353,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4439,10 +4439,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4511,10 +4511,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4580,10 +4580,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4649,10 +4649,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4718,10 +4718,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4797,10 +4797,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4866,10 +4866,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -4934,10 +4934,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohnFirst}}",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohnFirst}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5002,10 +5002,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5073,10 +5073,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5132,10 +5132,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5181,10 +5181,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5209,10 +5209,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/users",
+									"raw": "http://127.0.0.1:{{port}}/users",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5248,10 +5248,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/users",
+									"raw": "http://127.0.0.1:{{port}}/users",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5297,10 +5297,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/authentications",
+									"raw": "http://127.0.0.1:{{port}}/authentications",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5346,10 +5346,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/authentications",
+									"raw": "http://127.0.0.1:{{port}}/authentications",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5396,10 +5396,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/playlists",
+									"raw": "http://127.0.0.1:{{port}}/playlists",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5445,10 +5445,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5496,10 +5496,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5547,10 +5547,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -5592,10 +5592,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/activities",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/activities",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5652,10 +5652,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/xxx/activities",
+							"raw": "http://127.0.0.1:{{port}}/playlists/xxx/activities",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5712,10 +5712,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/activities",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/activities",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5793,10 +5793,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/activities",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/activities",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5862,10 +5862,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5921,10 +5921,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/activities",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/activities",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -5980,10 +5980,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -6029,10 +6029,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/songs",
+									"raw": "http://127.0.0.1:{{port}}/songs",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -6057,10 +6057,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/users",
+									"raw": "http://127.0.0.1:{{port}}/users",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -6107,10 +6107,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/users",
+									"raw": "http://127.0.0.1:{{port}}/users",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -6156,10 +6156,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/authentications",
+									"raw": "http://127.0.0.1:{{port}}/authentications",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -6205,10 +6205,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/authentications",
+									"raw": "http://127.0.0.1:{{port}}/authentications",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -6255,10 +6255,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:{{port}}/playlists",
+									"raw": "http://127.0.0.1:{{port}}/playlists",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"127.0.0.1"
 									],
 									"port": "{{port}}",
 									"path": [
@@ -6307,10 +6307,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/collaborations",
+							"raw": "http://127.0.0.1:{{port}}/collaborations",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6374,10 +6374,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/collaborations",
+							"raw": "http://127.0.0.1:{{port}}/collaborations",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6441,10 +6441,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/collaborations",
+							"raw": "http://127.0.0.1:{{port}}/collaborations",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6508,10 +6508,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/collaborations",
+							"raw": "http://127.0.0.1:{{port}}/collaborations",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6576,10 +6576,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/collaborations",
+							"raw": "http://127.0.0.1:{{port}}/collaborations",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6656,10 +6656,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists",
+							"raw": "http://127.0.0.1:{{port}}/playlists",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6723,10 +6723,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6792,10 +6792,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6878,10 +6878,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -6947,10 +6947,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -7016,10 +7016,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -7084,10 +7084,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/collaborations",
+							"raw": "http://127.0.0.1:{{port}}/collaborations",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -7151,10 +7151,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/collaborations",
+							"raw": "http://127.0.0.1:{{port}}/collaborations",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -7223,10 +7223,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists",
+							"raw": "http://127.0.0.1:{{port}}/playlists",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -7290,10 +7290,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}/songs",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}/songs",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
@@ -7359,10 +7359,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:{{port}}/playlists/{{playlistIdJohn}}",
+							"raw": "http://127.0.0.1:{{port}}/playlists/{{playlistIdJohn}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127.0.0.1"
 							],
 							"port": "{{port}}",
 							"path": [
