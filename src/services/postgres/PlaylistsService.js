@@ -1,6 +1,8 @@
 const { Pool } = require('pg');
 const { nanoid } = require('nanoid');
 const InvariantError = require('../../exceptions/InvariantError');
+const NotFoundError = require('../../exceptions/NotFoundError');
+const AuthorizationError = require('../../exceptions/AuthorizationError');
 
 class PlaylistsService {
   constructor(collaborationService) {
@@ -10,10 +12,41 @@ class PlaylistsService {
 
   async getPlaylists(owner) {
     const query = {
-      text: `SELECT playlist.id, playlist.id, users.username FROM playlist Inner Join users ON playlist.owner = users.id WHERE playlist.owner = $1`,
+      text: `SELECT p.id, p.name, u.username
+      FROM playlist p
+      INNER JOIN users u ON u.id = p.owner
+      WHERE p.owner = $1`,
       values: [owner],
     };
     const result = await this._pool.query(query);
+    return result.rows;
+  }
+
+  async getPlaylistsById(id) {
+    const query = {
+      text: `SELECT playlist.* FROM playlist WHERE playlist.id = $1`,
+      values: [id],
+    };
+    const result = await this._pool.query(query);
+
+    if (!result.rows.length) {
+      throw new InvariantError('Playlist tidak ditemukan');
+    }
+
+    return result.rows;
+  }
+
+  async getPlaylistsByIdUsername(id) {
+    const query = {
+      text: `SELECT playlist.id, playlist.name, users.username FROM playlist Inner Join users ON playlist.owner = users.id WHERE playlist.id = $1`,
+      values: [id],
+    };
+    const result = await this._pool.query(query);
+
+    if (!result.rows.length) {
+      throw new InvariantError('Playlist tidak ditemukan');
+    }
+
     return result.rows;
   }
 

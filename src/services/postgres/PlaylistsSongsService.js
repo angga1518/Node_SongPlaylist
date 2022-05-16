@@ -7,6 +7,16 @@ class PlaylistsSongsService {
     this._pool = new Pool();
   }
 
+  async getPlaylistSongByPlaylistId(playlistId) {
+    const query = {
+      text: 'SELECT s.id, s.title, s.performer from playlist_song ps inner join song s on ps.song_id = s.id where playlist_id = $1',
+      values: [playlistId],
+    };
+
+    const result = await this._pool.query(query);
+    return result.rows;
+  }
+
   async addPlaylistSong(playlistId, songId) {
     const id = `playlist_song-${nanoid(16)}`;
 
